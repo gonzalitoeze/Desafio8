@@ -42,7 +42,7 @@ io.on('connection', async (socket) => {
         productos.save(data);
         io.sockets.emit('producto', data);
     });
-
+//
     const listaMensajes = await messages.getAll();
     socket.emit('messages', listaMensajes);
 
