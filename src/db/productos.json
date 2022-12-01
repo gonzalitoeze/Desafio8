@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Disco de Vinilo",
+        "precio": "$45",
+        "thumbnail": "https://cdn2.iconfinder.com/data/icons/80-s-stuffs-outline/74/Asset_8-512.png",
+        "id": 1
+    },
+    {
+        "nombre": "80's RetroTV",
+        "precio": "$380",
+        "thumbnail": "https://cdn2.iconfinder.com/data/icons/80-s-stuffs-outline/62/Asset_14-512.png",
+        "id": 2
+    }
+]
