@@ -1,6 +1,7 @@
 //EXPRESS
 const express = require('express');
 const app = express();
+const moment = require('moment');
 
 //SERVER
 const { Server: HttpServer } = require('http');
@@ -10,9 +11,10 @@ const io = new IOServer(httpServer)
 
 //CONTENEDOR
 const Contenedor = require('./Contenedor/ContenedorSQL');
-const options = require('./Connections/options');
+const options = require('./connection/options');
 const productos = new Contenedor(options.mysql, 'productos');
 const mensajes = new Contenedor(options.sqlite3, 'mensajes');
+const script = require('./index');
 
 const PORT = 8080;
 const publicRoute = './public';
@@ -42,7 +44,7 @@ io.on('connection', async (socket) => {
         productos.save(data);
         io.sockets.emit('producto', data);
     });
-//
+
     const listaMensajes = await messages.getAll();
     socket.emit('messages', listaMensajes);
 

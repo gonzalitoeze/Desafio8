@@ -10,15 +10,16 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">Inicio</a>
-          <a class="navbar-brand" href="#">Vista de Productos</a>
-          <a class="navbar-brand" href="#">ChatMessenger</a>
+    <nav class="navbar">
+        <div class="container-fluid position-fixed navbar-dark bg-dark" style="margin-top: 5%; padding-left: 10%; padding-right: 10%; height: 60px;">
+          <a class="navbar-brand" href="#Form">Formulario</a>
+          <a class="navbar-brand" href="#Vista">Vista de Productos</a>
+          <a class="navbar-brand" href="#chat">ChatMessenger</a>
         </div>
     </nav>
-    <header class="container bg-dark" style="margin-top: 5%; padding-bottom: 2%; padding-top: 2%; padding-left: 2%; border-radius: 15px; color: white;">
-      <h2>Formulario de productos</h2>
+    <a name="Form"></a>
+    <header class="container bg-dark" style="margin-top: 10%; padding-bottom: 2%; padding-top: 2%; padding-left: 2%; border-radius: 15px; color: white;">
+        <h2>Formulario de productos</h2>
       <h3 class="container" style="padding-top: 1%;">Ingresar producto</h3>
     <div class="container">
       <div class="container">
@@ -35,8 +36,9 @@
     </div>
     </header>
     <hr>
+    <a name="Vista"></a>
     <div class="container bg-dark" style="margin-top: 5%; padding-bottom: 2%; padding-top: 2%; padding-left: 2%; border-radius: 15px; color: white;">
-      <h2>Vista de Productos</h2>
+        <h2>Vista de Productos</h2>
         <table id="productos" class="container">
           <tr>
             <th>Nombre</th>
@@ -57,6 +59,7 @@
     <section class="container bg-dark" style="margin-top: 5%; margin-bottom: 6%; padding-bottom: 2%; padding-top: 2%; padding-left: 2%; border-radius: 15px; color: white;">
       <h2>Centro de Mensajería</h2>
       <h3 class="container" style="padding-top: 1%; padding-bottom: 2%;">Ingresar email y mensaje</h3>
+      <a name="chat"></a>
       <div class="container">
         <div class="container">
           <form onsubmit="return addMessage(this)">
