@@ -45,13 +45,13 @@ io.on('connection', async (socket) => {
         io.sockets.emit('producto', data);
     });
 
-    const listaMensajes = await messages.getAll();
-    socket.emit('messages', listaMensajes);
+    const listaMensajes = await mensajes.getAll();
+    socket.emit('mensajes', listaMensajes);
 
     socket.on('nuevoMensaje', async data => {
         data.time = moment(new Date()).format('DD/MM/YYYY hh:mm:ss');
-        await messages.save(data);
-        const listaMensajes = await messages.getAll();
-        io.sockets.emit('messages', listaMensajes);
+        await mensajes.save(data);
+        const listaMensajes = await mensajes.getAll();
+        io.sockets.emit('mensajes', listaMensajes);
     });
 });
