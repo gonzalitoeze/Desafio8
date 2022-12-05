@@ -45,7 +45,7 @@ io.on('connection', async (socket) => {
         io.sockets.emit('producto', data);
     });
 
-    const listaMensajes = await mensajes.getAll();
+    const listaMensajes = await messages.getAll();
     socket.emit('mensajes', listaMensajes);
 
     socket.on('nuevoMensaje', async data => {
